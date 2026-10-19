@@ -1,0 +1,31 @@
+# Binary artifacts: only the release files are tracked
+*.img
+!darkhunter_boot.img
+!vendor_dlkm-swap/vendor_dlkm_INJECTION_v3.img
+*.zip
+!caihong-wifi-injection-modules.zip
+*.ko
+!modules/*.ko
+
+# Stock / backup images (never commit)
+boot_stock.img
+boot_b-BACKUP-working.img
+
+# Build trees and toolchains (clone separately)
+kernel-caihong/
+sm8650-modules/
+sm8650-devicetrees/
+out/
+anykernel3-modern/
+kali-nethunter-kernel-builder/
+lindroid-*/
+oneplus/
+mkbootimg-aosp/
+
+# Logs and editor leftovers
+*.log
+*.bak
+*.orig
+*.rej
+README-OLD-*.md
+.DS_Store
