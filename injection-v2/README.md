@@ -41,10 +41,4 @@ after a source revert):
 - `qcacld-3.0/Makefile` — `KBUILD_EXTRA_SYMBOLS` paths (`.kiwi_v2` is a symlink, so
   the `..` count was off)
 
-## The unresolved part
 
-**Loading.** The code is now complete and the OP11 dev reports it working on
-kiwi_v2 + 6.1. But on the Pad 2 the *stock* qcacld cannot be unloaded — `rmmod`
-hangs in `D` state with `cnss_driver_event` stuck — and the boot-time overlay
-loses the race (the driver loads before post-fs-data). That load path, not the
-patch code, is the remaining problem.
